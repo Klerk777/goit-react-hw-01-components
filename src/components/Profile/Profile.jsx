@@ -1,4 +1,5 @@
 import styles from './Profile.module.scss';
+import PropTypes from 'prop-types';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (
@@ -27,3 +28,19 @@ export default function Profile({ username, tag, location, avatar, stats }) {
     </div>
   );
 }
+
+Profile.defaultProps = {
+  avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
+};
+
+Profile.prototypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
+};
