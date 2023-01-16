@@ -4,6 +4,11 @@
   background-color: rgba(148, 91, 148, 0.404);
   border-radius: 20px;
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
+  transition: box-shadow 300ms ease;
+  &:hover,
+  &:focus {
+    box-shadow: 6px 6px 16px 3px rgba(0, 0, 0, 0.75);
+  }
 }
 .description {
   @include flexCentered(column);
@@ -25,6 +30,7 @@
   font-size: 20px;
 }
 .location {
+  margin-top: 20px;
   font-weight: 500;
   font-size: 24px;
 }
