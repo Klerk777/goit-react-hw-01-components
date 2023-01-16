@@ -1,7 +1,8 @@
 import styles from './App.module.scss';
-import { user, data } from 'data';
+import { user, data, friends } from 'data';
 import Profile from '../Profile/Profile';
 import Statistics from '../Statistics/Statistics';
+import FriendList from 'components/FriendList/FriendList';
 
 export const App = () => {
   return (
@@ -15,6 +16,10 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={data} />
       {/* <Statistics stats={data} /> */}
+
+      <FriendList>
+        <fri
+      </FriendList>
     </div>
   );
 };

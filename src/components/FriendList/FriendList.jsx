@@ -1,3 +1,13 @@
+import styles from './FriendList.module.scss';
+import FriendListItem from './FriendListItem/FriendListItem';
+
+export default function FriendList({ friends }) {
+  return (
+    <ul className={styles.friendList}>
+      <FriendListItem />
+    </ul>
+  );
+}
 /* Опис компонента <FriendList>
 
 Компонент повинен приймати один проп friends – масив об'єктів друзів.
