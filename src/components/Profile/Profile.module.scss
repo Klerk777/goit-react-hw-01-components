@@ -1,6 +1,7 @@
 @import '../../utils/mixins.scss';
 
 .profile {
+  // display: none;
   background-color: rgba(148, 91, 148, 0.404);
   border-radius: 20px;
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
@@ -38,7 +39,7 @@
   display: flex;
   justify-content: space-around;
   gap: 20px;
-  background-color: lavender;
+  background-color: rgb(145, 145, 153);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 

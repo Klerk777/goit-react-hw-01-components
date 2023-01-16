@@ -1,0 +1,38 @@
+@import '../../utils/mixins.scss';
+
+.statistics {
+  //   background-color: rgb(152, 152, 167);
+  background-color: rgba(148, 91, 148, 0.404);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
+  transition: box-shadow 300ms ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: 6px 6px 16px 3px rgba(0, 0, 0, 0.75);
+  }
+}
+.title {
+  font-size: 32px;
+  text-align: center;
+  padding: 20px 10px;
+}
+.statList {
+  display: flex;
+}
+.item {
+  @include flexCentered(column);
+  width: 80px;
+  height: 80px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.label {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.percentage {
+  font-size: 22px;
+  font-weight: 700;
+}
