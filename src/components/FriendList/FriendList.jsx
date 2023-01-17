@@ -1,25 +1,35 @@
 import styles from './FriendList.module.scss';
 import FriendListItem from './FriendListItem/FriendListItem';
+import PropTypes from 'prop-types';
 
 export default function FriendList({ friends }) {
   return (
     <ul className={styles.friendList}>
-      <FriendListItem />
+      {friends.map(({ id, avatar, name, isOnline }) => {
+        return (
+          <FriendListItem
+            key={id}
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
+          />
+        );
+      })}
     </ul>
   );
 }
-/* Опис компонента <FriendList>
 
-Компонент повинен приймати один проп friends – масив об'єктів друзів.
+FriendList.defaultProps = {
+  avatar: 'https://icons8.com/icon/33872/cat-profile',
+};
 
-Компонент повинен створювати DOM наступної структури.
-
-<ul class="friend-list">
-  <!-- Довільна кіл-сть FriendListItem -->
-</ul> */
-
-/* Приклад використання
-
-import friends from "path/to/friends.json";
-
-<FriendList friends={friends} />; */
+FriendList.propTypes = {
+  props: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ),
+};

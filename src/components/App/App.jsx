@@ -1,8 +1,9 @@
 import styles from './App.module.scss';
-import { user, data, friends } from 'data';
+import { user, data, friends, transactions } from 'data';
 import Profile from '../Profile/Profile';
 import Statistics from '../Statistics/Statistics';
 import FriendList from 'components/FriendList/FriendList';
+import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
@@ -16,10 +17,8 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={data} />
       {/* <Statistics stats={data} /> */}
-
-      <FriendList>
-        <fri
-      </FriendList>
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };

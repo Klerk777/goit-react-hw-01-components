@@ -2,7 +2,8 @@
 
 .profile {
   // display: none;
-  background-color: rgba(148, 91, 148, 0.404);
+  // background-color: rgba(148, 91, 148, 0.404);
+  background-color: rgba(98, 148, 91, 0.4);
   border-radius: 20px;
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.75);
   transition: box-shadow 300ms ease;
@@ -39,7 +40,7 @@
   display: flex;
   justify-content: space-around;
   gap: 20px;
-  background-color: rgb(145, 145, 153);
+  background-color: rgb(178, 178, 184);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 
